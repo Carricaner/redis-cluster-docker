@@ -1,0 +1,35 @@
+version: '3'
+
+services:
+  redis-node-1:
+    container_name: rd-1
+    build:
+      dockerfile: Dockerfile
+      context: ./nodes/node-1
+    networks:
+      - redis-net
+
+  # redis-node2:
+  #   container_name: rd-2
+  #   image: redis
+  #   command: redis-server /usr/local/etc/redis/redis.conf
+  #   volumes:
+  #     - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+  #   ports:
+  #     - "7101:6379"
+  #   networks:
+  #     - redis-net
+
+  # redis-node3:
+  #   container_name: rd-3
+  #   image: redis
+  #   command: redis-server /usr/local/etc/redis/redis.conf
+  #   volumes:
+  #     - $PWD/redis.conf:/usr/local/etc/redis/redis.conf
+  #   ports:
+  #     - "7102:6379"
+  #   networks:
+  #     - redis-net
+
+networks:
+  redis-net:
