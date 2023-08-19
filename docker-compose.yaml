@@ -1,48 +1,48 @@
 version: '3'
 
 services:
-  redis-node-1:
-    container_name: redis-node-1
+  node-1:
+    container_name: node-1
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-1
     networks:
       - redis-net
 
-  redis-node-2:
-    container_name: redis-node-2
+  node-2:
+    container_name: node-2
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-2
     networks:
       - redis-net
   
-  redis-node-3:
-    container_name: redis-node-3
+  node-3:
+    container_name: node-3
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-3
     networks:
       - redis-net
 
-  redis-node-4:
-    container_name: redis-node-4
+  node-4:
+    container_name: node-4
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-4
     networks:
       - redis-net
 
-  redis-node-5:
-    container_name: redis-node-5
+  node-5:
+    container_name: node-5
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-5
     networks:
       - redis-net
 
-  redis-node-6:
-    container_name: redis-node-6
+  node-6:
+    container_name: node-6
     build:
       dockerfile: Dockerfile
       context: ./nodes/node-6

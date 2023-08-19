@@ -1,26 +1,27 @@
 #!/bin/bash
 
+. "./.env"
+
 init_redis_cluster() {
-    local NODE_NUMBER=$1
+    string_list=()
 
-    # Get a list of running container names
-    container_names=$(docker ps --format "{{.Names}}")
-
-    # Initialize an empty list to store IP addresses
-    ip_list=()
-
-    # Iterate through each container name
-    for name in $container_names; do
-        # Get the IP address of the container
-        container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$name")
-        
-        # Append the IP address to the list
-        ip_list+=("$container_ip")
+    for index in "${!SUBFOLDERS[@]}"; do
+        container_name="${SUBFOLDERS[$index]}"
+        port="${PORTS[$index]}"
+        container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$container_name")
+        string_list+=("$container_ip:$port")
     done
 
-    # Iterate through the list of IP addresses
-    for ip in "${ip_list[@]}"; do
-        echo "Container IP: $ip"
-        # Perform your operations on each IP address
+    command="redis-cli --cluster create" 
+    for str in "${string_list[@]}"; do
+        command="$command $str"
     done
+    command="$command --cluster-replicas $CLUSTER_REPLICAS --cluster-yes"
+    echo "#!/bin/bash\n$command" > "$PWD/nodes/node-1/cluster.sh"
+    chmod +x $PWD/nodes/node-1/cluster.sh
+    docker cp $PWD/nodes/node-1/cluster.sh node-1:/data/cluster.sh
+    docker exec node-1 sh /data/cluster.sh
+    
+    # Below doesn't work becuase Docker create another container based on node-1 but w/o the copied file we added afterwards
+    # docker compose run --rm node-1 sh /data/cluster.sh
 }
