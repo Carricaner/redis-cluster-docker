@@ -1,0 +1,241 @@
+[
+    {
+        "Id": "d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c",
+        "Created": "2023-08-18T09:08:27.579884635Z",
+        "Path": "docker-entrypoint.sh",
+        "Args": [
+            "/bin/sh",
+            "-c",
+            "redis-server /data/config.conf"
+        ],
+        "State": {
+            "Status": "running",
+            "Running": true,
+            "Paused": false,
+            "Restarting": false,
+            "OOMKilled": false,
+            "Dead": false,
+            "Pid": 97452,
+            "ExitCode": 0,
+            "Error": "",
+            "StartedAt": "2023-08-18T09:08:28.241563635Z",
+            "FinishedAt": "0001-01-01T00:00:00Z"
+        },
+        "Image": "sha256:1ead90915c30a645ef181a5648920a582c2b5e8691c0a75a0c426557275cc7bf",
+        "ResolvConfPath": "/var/lib/docker/containers/d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c/resolv.conf",
+        "HostnamePath": "/var/lib/docker/containers/d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c/hostname",
+        "HostsPath": "/var/lib/docker/containers/d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c/hosts",
+        "LogPath": "/var/lib/docker/containers/d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c/d3f771740abb4d7fd0e3a95fc4c0cb5972fe4f64d3659a7eafab907d3d5abf1c-json.log",
+        "Name": "/redis-node-1",
+        "RestartCount": 0,
+        "Driver": "overlay2",
+        "Platform": "linux",
+        "MountLabel": "",
+        "ProcessLabel": "",
+        "AppArmorProfile": "",
+        "ExecIDs": [
+            "2bb954f95a46bd8ec5710f8cf57b241932a77fe597d3a5809a484e8ca18dc728"
+        ],
+        "HostConfig": {
+            "Binds": null,
+            "ContainerIDFile": "",
+            "LogConfig": {
+                "Type": "json-file",
+                "Config": {}
+            },
+            "NetworkMode": "redis-cluster-test_redis-net",
+            "PortBindings": {},
+            "RestartPolicy": {
+                "Name": "",
+                "MaximumRetryCount": 0
+            },
+            "AutoRemove": false,
+            "VolumeDriver": "",
+            "VolumesFrom": null,
+            "ConsoleSize": [
+                0,
+                0
+            ],
+            "CapAdd": null,
+            "CapDrop": null,
+            "CgroupnsMode": "private",
+            "Dns": null,
+            "DnsOptions": null,
+            "DnsSearch": null,
+            "ExtraHosts": [],
+            "GroupAdd": null,
+            "IpcMode": "private",
+            "Cgroup": "",
+            "Links": null,
+            "OomScoreAdj": 0,
+            "PidMode": "",
+            "Privileged": false,
+            "PublishAllPorts": false,
+            "ReadonlyRootfs": false,
+            "SecurityOpt": null,
+            "UTSMode": "",
+            "UsernsMode": "",
+            "ShmSize": 67108864,
+            "Runtime": "runc",
+            "Isolation": "",
+            "CpuShares": 0,
+            "Memory": 0,
+            "NanoCpus": 0,
+            "CgroupParent": "",
+            "BlkioWeight": 0,
+            "BlkioWeightDevice": null,
+            "BlkioDeviceReadBps": null,
+            "BlkioDeviceWriteBps": null,
+            "BlkioDeviceReadIOps": null,
+            "BlkioDeviceWriteIOps": null,
+            "CpuPeriod": 0,
+            "CpuQuota": 0,
+            "CpuRealtimePeriod": 0,
+            "CpuRealtimeRuntime": 0,
+            "CpusetCpus": "",
+            "CpusetMems": "",
+            "Devices": null,
+            "DeviceCgroupRules": null,
+            "DeviceRequests": null,
+            "MemoryReservation": 0,
+            "MemorySwap": 0,
+            "MemorySwappiness": null,
+            "OomKillDisable": null,
+            "PidsLimit": null,
+            "Ulimits": null,
+            "CpuCount": 0,
+            "CpuPercent": 0,
+            "IOMaximumIOps": 0,
+            "IOMaximumBandwidth": 0,
+            "MaskedPaths": [
+                "/proc/asound",
+                "/proc/acpi",
+                "/proc/kcore",
+                "/proc/keys",
+                "/proc/latency_stats",
+                "/proc/timer_list",
+                "/proc/timer_stats",
+                "/proc/sched_debug",
+                "/proc/scsi",
+                "/sys/firmware"
+            ],
+            "ReadonlyPaths": [
+                "/proc/bus",
+                "/proc/fs",
+                "/proc/irq",
+                "/proc/sys",
+                "/proc/sysrq-trigger"
+            ]
+        },
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/9421b399c0a9670f5c005cf22054f40f75b40f9501a10f5d4f5c72f4256dc6d8-init/diff:/var/lib/docker/overlay2/uor6fej22atagmgoti3f3cdpv/diff:/var/lib/docker/overlay2/dffd2a463m4gzkd6f6qccocq3/diff:/var/lib/docker/overlay2/e5e7cd93158d6d31a12394c20f740536e58475f185cf39564dbdcb9e9213998a/diff:/var/lib/docker/overlay2/8b17c6bf09044daccf784d2095f3b86c46224ebbc588d6275fec35bcd61fb7d5/diff:/var/lib/docker/overlay2/89d8158b8a4f7b6f87d249addf80365969eb4eef2b3e200d6e38407d85015c8b/diff:/var/lib/docker/overlay2/d7ee6f7f844dab7a2420f9ba78eecd38b6461d16880277a984a4589b6ca28e37/diff:/var/lib/docker/overlay2/aa9fa4b1ae7356a4f07f10302b6fa979369b9002732dddd9fddcb5c4f9bc24af/diff:/var/lib/docker/overlay2/f934f8c704dba413a2bc3fe860d312654a136e900da6135ccbcf776887b7a5a1/diff",
+                "MergedDir": "/var/lib/docker/overlay2/9421b399c0a9670f5c005cf22054f40f75b40f9501a10f5d4f5c72f4256dc6d8/merged",
+                "UpperDir": "/var/lib/docker/overlay2/9421b399c0a9670f5c005cf22054f40f75b40f9501a10f5d4f5c72f4256dc6d8/diff",
+                "WorkDir": "/var/lib/docker/overlay2/9421b399c0a9670f5c005cf22054f40f75b40f9501a10f5d4f5c72f4256dc6d8/work"
+            },
+            "Name": "overlay2"
+        },
+        "Mounts": [
+            {
+                "Type": "volume",
+                "Name": "d57c4f5cf4cf52f1ee2d6c7d524a7201a59d29757f4800883c833617030718c8",
+                "Source": "/var/lib/docker/volumes/d57c4f5cf4cf52f1ee2d6c7d524a7201a59d29757f4800883c833617030718c8/_data",
+                "Destination": "/data",
+                "Driver": "local",
+                "Mode": "",
+                "RW": true,
+                "Propagation": ""
+            }
+        ],
+        "Config": {
+            "Hostname": "d3f771740abb",
+            "Domainname": "",
+            "User": "",
+            "AttachStdin": false,
+            "AttachStdout": true,
+            "AttachStderr": true,
+            "ExposedPorts": {
+                "6379/tcp": {}
+            },
+            "Tty": false,
+            "OpenStdin": false,
+            "StdinOnce": false,
+            "Env": [
+                "PATH=/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin",
+                "GOSU_VERSION=1.16",
+                "REDIS_VERSION=7.2.0",
+                "REDIS_DOWNLOAD_URL=http://download.redis.io/releases/redis-7.2.0.tar.gz",
+                "REDIS_DOWNLOAD_SHA=8b12e242647635b419a0e1833eda02b65bf64e39eb9e509d9db4888fb3124943"
+            ],
+            "Cmd": [
+                "/bin/sh",
+                "-c",
+                "redis-server /data/config.conf"
+            ],
+            "Image": "redis-cluster-test-redis-node-1",
+            "Volumes": {
+                "/data": {}
+            },
+            "WorkingDir": "/data",
+            "Entrypoint": [
+                "docker-entrypoint.sh"
+            ],
+            "OnBuild": null,
+            "Labels": {
+                "com.docker.compose.config-hash": "f3163268987d9cfc179167221124bead819df770b98240eced1549796ed00614",
+                "com.docker.compose.container-number": "1",
+                "com.docker.compose.depends_on": "",
+                "com.docker.compose.image": "sha256:1ead90915c30a645ef181a5648920a582c2b5e8691c0a75a0c426557275cc7bf",
+                "com.docker.compose.oneoff": "False",
+                "com.docker.compose.project": "redis-cluster-test",
+                "com.docker.compose.project.config_files": "/Users/darren/Documents/stuffs/practice/redis/redis-cluster-test/docker-compose.yaml",
+                "com.docker.compose.project.working_dir": "/Users/darren/Documents/stuffs/practice/redis/redis-cluster-test",
+                "com.docker.compose.service": "redis-node-1",
+                "com.docker.compose.version": "2.20.2"
+            }
+        },
+        "NetworkSettings": {
+            "Bridge": "",
+            "SandboxID": "243ef8bc33892f760b9d1c5580400b7a745ef9161901df46efa4c2df89d99faf",
+            "HairpinMode": false,
+            "LinkLocalIPv6Address": "",
+            "LinkLocalIPv6PrefixLen": 0,
+            "Ports": {
+                "6379/tcp": null
+            },
+            "SandboxKey": "/var/run/docker/netns/243ef8bc3389",
+            "SecondaryIPAddresses": null,
+            "SecondaryIPv6Addresses": null,
+            "EndpointID": "",
+            "Gateway": "",
+            "GlobalIPv6Address": "",
+            "GlobalIPv6PrefixLen": 0,
+            "IPAddress": "",
+            "IPPrefixLen": 0,
+            "IPv6Gateway": "",
+            "MacAddress": "",
+            "Networks": {
+                "redis-cluster-test_redis-net": {
+                    "IPAMConfig": null,
+                    "Links": null,
+                    "Aliases": [
+                        "redis-node-1",
+                        "redis-node-1",
+                        "d3f771740abb"
+                    ],
+                    "NetworkID": "12c04e1c2d6fe632e2c78fb6f561fe877c1353e1d01fe3d0032645c0c8259463",
+                    "EndpointID": "51a02456147ab370019ac20d8b7000170b1d5f2857350f97067e0b44966cfb4d",
+                    "Gateway": "172.24.0.1",
+                    "IPAddress": "172.24.0.5",
+                    "IPPrefixLen": 16,
+                    "IPv6Gateway": "",
+                    "GlobalIPv6Address": "",
+                    "GlobalIPv6PrefixLen": 0,
+                    "MacAddress": "02:42:ac:18:00:05",
+                    "DriverOpts": null
+                }
+            }
+        }
+    }
+]
