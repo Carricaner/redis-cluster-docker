@@ -11,7 +11,7 @@ set -e
 . "$PWD/scripts/functions/redis-cluster-init.sh"
 
 # Local init
-launch_docker_compose
+local_config_init
 
 # Launch docker containers
 launch_docker_compose
