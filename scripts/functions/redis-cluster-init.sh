@@ -4,12 +4,18 @@
 
 init_redis_cluster() {
     string_list=()
-
+    first_iteration=true
     for index in "${!SUBFOLDERS[@]}"; do
         container_name="${SUBFOLDERS[$index]}"
         port="${PORTS[$index]}"
         container_ip=$(docker inspect -f '{{range .NetworkSettings.Networks}}{{.IPAddress}}{{end}}' "$container_name")
         string_list+=("$container_ip:$port")
+
+        # Write the first IP and port of Redis cluster in the output file
+        if [ "$first_iteration" = true ]; then
+            echo "$(date '+%Y-%m-%d %H:%M:%S') [INFO] To use RedisInsight to connect the Redis Cluster, please use: $container_ip:$port" > $PWD/output.txt
+            first_iteration=false
+        fi
     done
 
     command="redis-cli --cluster create" 
