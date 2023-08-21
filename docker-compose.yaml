@@ -8,9 +8,9 @@ services:
       context: ./nodes/node-1
     networks:
       - redis-net
-    ports:
-      # local port 7000 seems to be used by MacOS
-      - "7500:7000"
+    # ports:
+    #   # local port 7000 seems to be used by MacOS
+    #   - "7500:7000"
 
   node-2:
     container_name: node-2
@@ -62,3 +62,5 @@ services:
 
 networks:
   redis-net:
+    external: true
+    name: redis-network
